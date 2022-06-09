@@ -1,0 +1,649 @@
+*
+{
+    box-sizing: border-box;
+    margin : 0;
+    padding : 0;
+}
+
+body
+{
+    background-image: linear-gradient(
+        #0096C9 80%, 
+        #2645bf 20% );
+
+    width: 100%;
+    height: 100%;
+    min-height: calc(100vh);
+}
+
+article 
+{
+    min-height: 100%;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 100%;
+}
+
+.navigation-bar
+{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 22px;
+
+    text-align: right;
+    list-style: none;
+    padding-right : 20px;
+}
+
+.navigation-button
+{
+    display : inline-block;
+    padding : 30px 20px;
+}
+
+.navigation-text
+{
+    color : white;
+    text-decoration : none;
+
+    padding-left: 10px ;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+    border-style: solid;
+    border-radius : 20px;
+
+    transition : all 0.2s linear;
+}
+
+.navigation-text:hover
+{
+    color : #0c1c8c;
+}
+
+.navigation-menu
+{
+    min-height : 50px;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.navigation-hamburger
+{
+    display : none;
+    cursor : pointer;
+}
+
+.navigation-line
+{
+    display : block;
+    width : 25px;
+    height : 3px;
+    margin : 5px auto;
+    transition : all 0.3s ease-in-out;
+    background-color : white;
+}
+
+#video-background
+{
+    position : absolute;
+    min-width: 100%;
+    min-height: 100%;
+    z-index : -1;
+}
+
+.header
+{
+    background : linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.7));
+    background-repeat : no-repeat;
+
+    min-height: 100vh;
+    max-height: 100vh;
+    position: relative;
+    overflow : hidden;
+}
+
+#header-title
+{
+    color: white;
+    font-size : clamp(36px, 7vw, 55px);
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+
+    display : flex;
+    justify-content: center;
+    position : absolute;
+    top : 29%;
+    left : 11%;
+    right : 11%;
+}
+
+#header-subtitle
+{
+    color: white;
+    font-size : 26px;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+
+    display : flex;
+    margin : auto;
+    justify-content: center;
+    position : absolute;
+    bottom : 40%;
+    padding-left: 3%;
+    padding-right : 3%;
+    left : 8.25%;
+    right : 8.25%;
+}
+
+
+.header-curve
+{
+    position : absolute;
+    bottom : 0;
+    left : 0;
+    width : 100%;
+}
+
+#container-title
+{
+    color: white;
+    font-size : clamp(20px, 5vw, 32px);
+    font-family: 'Quicksand', sans-serif;
+    text-decoration: none;
+    text-align: center;
+
+    margin-right: 20%;
+    margin-left: 20%;
+    margin-top : 1%;
+    padding-bottom : 30px;
+    justify-content : center;
+
+    background-image : linear-gradient(90deg, blue, rgb(19, 140, 253));
+    background-size : 0% 3px;
+    background-repeat: no-repeat;
+    background-position: bottom left;
+
+    transition : 500ms ease;
+}
+
+#container-title:hover
+{
+    background-size : 100% 6px;
+}
+
+.container
+{
+    padding-left: 60px;
+    padding-right: 60px;
+
+    display : flex;
+    justify-content : space-evenly;
+    flex-direction : row;
+    flex-flow : wrap;
+}
+
+.schools-box
+{
+    color: white;
+    background-color : #004EBA;
+    font-family: 'Merriweather', serif;
+    font-size : 14px;
+
+    text-align: center;
+    text-decoration: none;
+
+    border-style: solid;
+    border-radius : 20px;
+
+    margin: 16px;
+    padding: 10px;
+    width: 160px;
+    min-height : 160px;
+    margin-top : 45px;
+
+    transition: 300ms ease ;
+}
+
+.schools-box:hover
+{
+    background-color : #0c1c8c;
+    transform: scale(1.1);
+}
+
+.icon 
+{
+    display: grid;
+    margin: 0;
+    border: 0;
+}
+
+.icon-text
+{
+    display: block;
+    padding-top : 10px;
+    letter-spacing: 1.5px;
+}
+
+.description-container
+{
+    position : relative;
+    min-height : 1100px;
+    display : flex;
+    flex-flow : wrap;
+    margin-top : 100px;
+    margin-bottom : 440px;
+}
+
+.description-title
+{
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+    text-decoration: none;
+
+    position : absolute;
+    left : 3.2%;
+    top : 7%;
+    min-width : 43%;
+
+    margin-right : 10px;
+}
+
+.description-title p
+{
+    font-size : clamp(30px, 4vh, 40px);
+    margin-bottom : 20px;
+    padding-bottom : 20px;
+    text-align: center;
+
+    background-image : linear-gradient(90deg, blue, rgb(19, 140, 253));
+    background-size : 0% 3px;
+    background-repeat: no-repeat;
+    background-position: bottom left;
+
+    transition : 500ms ease;
+}
+
+.description-title p:hover
+{
+    background-size : 100% 6px;
+}
+
+.description-text
+{
+    color: white;
+    font-size : clamp(10px, 4vh, 20px);
+    font-family: 'Quicksand', sans-serif;
+    line-height: 50px;
+
+    display : inline-block;
+
+    position : absolute;
+    width : 40%;
+    top : 18%;
+    left : 5%;
+    padding : 40px;
+
+    border-color : whitesmoke;
+    border-width : 3px;
+    border-style: solid;
+    border-radius: 20px;
+
+    background-color : #004EBA; 
+    background-size: cover;
+
+    transition: 300ms ease ;
+}
+
+.description-text:hover
+{
+    padding : 50px;
+    background-color : #0c1c8c;
+}
+
+.description-image
+{
+    background-repeat : no-repeat;
+    position : absolute;
+    width : 45%;
+    min-width : 20%;
+    display : inline-block;
+    right : 5%;
+    bottom : 38%;
+    margin: 0 auto;
+    margin-bottom : 30px;
+    flex : 0 0 auto;
+
+    border : 5px solid whitesmoke;
+    border-radius: 20px;
+}
+
+.description-curve
+{
+    position : absolute;
+    bottom : 0;
+    left : 0;
+    width : 100%;
+}
+
+
+#footer
+{
+    color: whitesmoke; background-color : #2e3030; border-bottom:1px solid #3B3B3B; height:160px;
+    margin-top: auto;
+    justify-self: flex-end;
+    width : 100vw;
+    flex-grow: 1;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+
+    place-content: center;
+    place-items : center;
+}
+
+.footer-text
+{
+    text-align: center;
+    padding-top : 40px;
+    padding-bottom : 40px;
+}
+
+@media all and (max-width : 1500px)
+{
+    .description-title
+    {
+        left : 5%;
+        right : 5%;
+        top : 5%;
+    }
+
+}
+
+@media all and (max-width : 1240px)
+{
+
+    .description-container
+    {
+        margin-bottom : 600px;
+    }
+
+    .description-curve
+    {
+        transform: translateY(100px);
+    }
+
+    .description-title 
+    {
+        top : 0%;
+    }
+
+    .description-image
+    {
+        top : 10%;
+        right : 13%;
+        left : 13%;
+        width : 55%;
+    }
+
+    .description-text
+    {
+        margin-top : 35%;
+        width : 80%;
+        min-height : 30%;
+        margin-left : 5%;
+    }
+
+}
+
+@media all and (max-width : 988px)
+{
+    #container-title
+    {
+        margin-right: 2%;
+        margin-left: 2%;
+    }
+
+    .navigation-hamburger
+    {
+        z-index : 5;
+        display : block; 
+        position : fixed;
+        justify-content: center;
+        padding-top : 10px; 
+        padding-bottom : 10px;
+        width : 100%;
+
+        background-color: #0096C9;
+    }
+
+    .navigation-hamburger.active .navigation-line:nth-child(2)
+    {
+        opacity : 0;
+    }
+
+    .navigation-hamburger.active .navigation-line:nth-child(1)
+    {
+        transform : translateY(8px) rotate(45deg);
+    }
+
+    .navigation-hamburger.active .navigation-line:nth-child(3)
+    {
+        transform : translateY(-8px) rotate(-45deg);
+    }
+    
+    .navigation-bar
+    {
+        position : fixed;
+        top : -20%;
+        background-color: #0096C9;
+        gap : 0;
+        flex-direction : column;  
+        width : 100%;
+        text-align : center;
+        z-index : 5;
+        padding-right : 0;
+
+        transition : 0.3s ease-in-out;
+    }
+
+    .navigation-button
+    {
+        margin-bottom : 15px;
+        margin-top : 10px;
+        padding : 15px 30px;
+    }
+
+    .navigation-bar.active 
+    {
+        top : 5%;
+    }
+
+    #header-title
+    {
+        top : 25%;
+        left : 7%;
+        right : 7%;
+    }
+
+    #header-subtitle
+    {
+        bottom : 35%;
+        left : 5.25%;
+        right : 5.25%;
+    }
+    
+    .container
+    {
+        padding-left : 20px;
+        padding-right : 20px;
+    }
+
+    .schools-box
+    {
+        transform:scale(.8);
+        margin : 0px;
+    }
+
+    .schools-box:hover
+    {
+        transform:scale(.9);
+        margin : 0px;
+    }
+
+    .description-container
+    {
+        margin-top : 80px;
+    }
+
+    .description-text p
+    {
+        font-size : 18px;
+    }
+
+    .description-text
+    {
+        padding : 30px;
+    }
+
+    .description-title p
+    {
+        font-size : 35px;
+    }
+
+    .description-curve
+    {
+        transform: translateY(0px);
+    }
+
+    .description-container
+    {
+        margin-bottom : 440px;
+    }
+}
+
+@media all and (max-width : 662px)
+{
+    .description-container
+    {
+        margin-bottom : 490px;
+    }
+
+    .navigation-button
+    {
+        padding : 15px 15px;
+    }
+
+    #header-title
+    {
+        left : 4%;
+        right : 4%;
+        top : 28%;
+    }
+
+    #header-subtitle
+    {
+        top : 60%;
+        left : 2.25%;
+        right : 2.25%;
+    }
+
+    .container
+    {
+        padding-left : 0px;
+        padding-right : 0px;
+    }
+
+    #container-title
+    {
+        margin-right: 1%;
+        margin-left: 1%;
+    }
+
+    .description-title
+    {
+        left : 0%;
+        right : 0%;
+    }
+
+    .description-image
+    {
+        top : 12%;
+        width : 70%;
+    }
+
+    .description-text
+    {
+        margin-top : 50%;
+        font-size : 16px;
+        width : 90%;
+        left : 0%;
+        padding : 20px;
+        line-height: 40px;
+    }
+
+
+
+}
+
+@media all and (max-width : 480px)
+{
+
+    .container
+    {
+        width : 100%;
+    }
+
+    .description-container
+    {
+        margin-bottom : 560px;
+    }
+
+    .description-image
+    {
+        width : 80%;
+        left : 10%
+    }
+
+    .schools-box
+    {
+        transform:scale(.7);
+        margin : 0px;
+        width : 50%;
+    }
+
+    .schools-box:hover
+    {
+        transform:scale(.8);
+        margin : 0px;
+    }
+
+    .description-title p
+    {
+        font-size : 28px;
+        left : 0%;
+        right : 0%;
+        padding : 0%;
+        margin : 0%;
+    }
+}
+
+@media all and (max-width : 351px)
+{
+    .description-image
+    {
+        top : 15%;
+        width : 85%;
+        left : 7%;
+    }
+
+    .description-text
+    {
+        line-height: 35px;
+        padding : 10px;
+        margin-top : 70%;
+    }
+
+
+}
